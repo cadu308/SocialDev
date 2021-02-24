@@ -1,3 +1,6 @@
 {
-    "mongoURI": "mongodb+srv://cadu123:admin@socialdev.gei1t.mongodb.net/SocialDev?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://cadu123:admin@socialdev.gei1t.mongodb.net/SocialDev?retryWrites=true&w=majority",
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "9cdfbd3c4795405493e2",
+    "githubSecret": "a2e6eb81dce76c6a9a86191988a0ed75e815c4ec"
 }

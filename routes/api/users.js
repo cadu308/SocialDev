@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
 const { check, validationResult } = require('express-validator/check');
 
 const User = require('../../models/User');
@@ -10,9 +12,9 @@ const User = require('../../models/User');
 //@desc     Registrar Usuário
 //@access   Publico
 router.post('/', [
-    check('name', 'É necessário informar um nome').not().isEmpty(),
+    check('nome', 'É necessário informar um nome').not().isEmpty(),
     check('email', 'É necessário informar um e-mail válido').isEmail(),
-    check('password', 'É necessário inserir uma senha com 6 ou mais caracteres').isLength({ min: 6 })
+    check('senha', 'É necessário inserir uma senha com 6 ou mais caracteres').isLength({ min: 6 })
 ], async (req, res) => {
     const errors = validationResult(req);
 
@@ -20,7 +22,7 @@ router.post('/', [
         return res.status(400).json({ errors: errors.array() });
     }
 
-    const { name, email, password } = req.body;
+    const { nome, email, senha } = req.body;
 
     try {
         // Verifica se o usuário existe
@@ -38,22 +40,35 @@ router.post('/', [
         });
 
         user = new User({
-            name,
+            nome,
             email,
             avatar,
-            password 
+            senha 
         });
 
         // Criptografa a senha
         const salt = await bcrypt.genSalt(10);
 
-        user.password = await bcrypt.hash(password, salt);
+        user.senha = await bcrypt.hash(senha, salt);
 
         await user.save();
 
         // Retorna jsonwebtoken 
-        
-        res.send('Usuário Registrado!');
+        const payload = {
+            user: {
+                id: user.id
+            }
+        } 
+
+        jwt.sign(
+            payload, 
+            config.get("jwtSecret"),
+            { expiresIn: 360000 }, // Tempo para expirar sessão
+            (err, token) => {
+                if (err) throw err;
+                res.json({ token });
+            }    
+        );
 
     } catch (err) {
         console.error(err.message);
