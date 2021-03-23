@@ -14,8 +14,9 @@ export const Landing = ({ isAuthenticated }) => {
         <div className='landing-inner'>
           <h1 className='x-large'>Social Developer</h1>
           <p className='lead'>
-            Create a developer profile/portfolio, share posts and get help from
-            other developers
+            Crie o seu perfil com sua experiência profissional, compartilhe
+            posts e busque ajuda e adquira conhecimento com outros
+            desenvolvedores!
           </p>
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>

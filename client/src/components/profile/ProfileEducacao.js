@@ -9,8 +9,9 @@ const ProfileEducacao = ({
     <div>
       <h3 className='text-dark'>{escola}</h3>
       <p>
+        <strong>Período: </strong>
         <Moment format='DD/MM/YYYY'>{de}</Moment> -{' '}
-        {!ate ? ' Agora' : <Moment format='DD/MM/YYYY'>{ate}</Moment>}
+        {!ate ? ' Atualmente' : <Moment format='DD/MM/YYYY'>{ate}</Moment>}
       </p>
       <p>
         <strong>Nível: </strong> {nivel}

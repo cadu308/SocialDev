@@ -9,8 +9,9 @@ const ProfileExperiencia = ({
     <div>
       <h3 className='text-dark'>{empresa}</h3>
       <p>
+        <strong>Período: </strong>
         <Moment format='DD/MM/YYYY'>{de}</Moment> -{' '}
-        {!ate ? ' Agora' : <Moment format='DD/MM/YYYY'>{ate}</Moment>}
+        {!ate ? ' Atualmente' : <Moment format='DD/MM/YYYY'>{ate}</Moment>}
       </p>
       <p>
         <strong>Função: </strong> {funcao}

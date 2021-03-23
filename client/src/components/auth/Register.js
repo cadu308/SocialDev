@@ -56,8 +56,8 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            This site uses Gravatar so if you want a profile image, use a
-            Gravatar email
+            Este site utiliza o Gravatar como plataforma universal de imagem de
+            perfil. Utilize um e-mail gravatar.
           </small>
         </div>
         <div className='form-group'>
@@ -78,7 +78,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input type='submit' className='btn btn-primary' value='Registtrar' />
+        <input type='submit' className='btn btn-primary' value='Registrar' />
       </form>
       <p className='my-1'>
         Já possui uma conta? <Link to='/login'>Acesse</Link>

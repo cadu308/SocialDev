@@ -57,17 +57,17 @@ const CreateProfile = ({ createProfile, history }) => {
         <div className='form-group'>
           <select name='nivel' value={nivel} onChange={(e) => onChange(e)}>
             <option value='0'>* Selecione Seu Nível Profissional</option>
-            <option value='Developer'>Desenvolvedor</option>
-            <option value='Junior Developer'>Desenvolvedor Júnior</option>
-            <option value='Senior Developer'>Desenvolvedor Senior</option>
-            <option value='Manager'>Gerente</option>
-            <option value='Student or Learning'>Estudante</option>
-            <option value='Instructor'>Professor</option>
-            <option value='Intern'>Estagiário</option>
-            <option value='Other'>Outro</option>
+            <option value='Desenvolvedor'>Desenvolvedor</option>
+            <option value='Desenvolvedor Junior'>Desenvolvedor Júnior</option>
+            <option value='Desenvolvedor Senior'>Desenvolvedor Senior</option>
+            <option value='Gerente'>Gerente</option>
+            <option value='Estudante'>Estudante</option>
+            <option value='Professor'>Professor</option>
+            <option value='Estagiário'>Estagiário</option>
+            <option value='Outro'>Outro</option>
           </select>
           <small className='form-text'>
-            Nos dê uma ideia de onde você está na sua carreira
+            Nos dê uma ideia de seu nível profissional
           </small>
         </div>
         <div className='form-group'>
@@ -79,7 +79,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own company or one you work for
+            Pode ser uma empresa sua ou na qual você trabalha
           </small>
         </div>
         <div className='form-group'>
@@ -91,7 +91,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Seu website ou da empresa que administra
           </small>
         </div>
         <div className='form-group'>
@@ -103,7 +103,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            City & state suggested (eg. Boston, MA)
+            Cidade & UF (ex: Rio de Janeiro, RJ)
           </small>
         </div>
         <div className='form-group'>
@@ -115,7 +115,8 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)
+            Por favor, utilize vírgulas para a separação (ex:
+            HTML,CSS,JavaScript,PHP)
           </small>
         </div>
         <div className='form-group'>
@@ -127,8 +128,8 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={(e) => onChange(e)}
           />
           <small className='form-text'>
-            If you want your latest repos and a Github link, include your
-            username
+            Caso queira que seja exibido seus repositórios atuais e um link de
+            acesso do Github, inclua seu username
           </small>
         </div>
         <div className='form-group'>
@@ -138,7 +139,7 @@ const CreateProfile = ({ createProfile, history }) => {
             value={bio}
             onChange={(e) => onChange(e)}
           ></textarea>
-          <small className='form-text'>Tell us a little about yourself</small>
+          <small className='form-text'>Nos fale um pouco sobre você</small>
         </div>
 
         <div className='my-2'>
@@ -158,7 +159,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <i className='fab fa-twitter fa-2x'></i>
               <input
                 type='text'
-                placeholder='Twitter URL'
+                placeholder='URL do Twitter'
                 name='twitter'
                 value={twitter}
                 onChange={(e) => onChange(e)}
@@ -169,7 +170,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <i className='fab fa-facebook fa-2x'></i>
               <input
                 type='text'
-                placeholder='Facebook URL'
+                placeholder='URL do Facebook'
                 name='facebook'
                 value={facebook}
                 onChange={(e) => onChange(e)}
@@ -180,7 +181,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <i className='fab fa-youtube fa-2x'></i>
               <input
                 type='text'
-                placeholder='YouTube URL'
+                placeholder='URL do YouTube'
                 name='youtube'
                 value={youtube}
                 onChange={(e) => onChange(e)}
@@ -191,7 +192,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <i className='fab fa-linkedin fa-2x'></i>
               <input
                 type='text'
-                placeholder='Linkedin URL'
+                placeholder='URL do Linkedin'
                 name='linkedin'
                 value={linkedin}
                 onChange={(e) => onChange(e)}
@@ -202,7 +203,7 @@ const CreateProfile = ({ createProfile, history }) => {
               <i className='fab fa-instagram fa-2x'></i>
               <input
                 type='text'
-                placeholder='Instagram URL'
+                placeholder='URL do Instagram'
                 name='instagram'
                 value={instagram}
                 onChange={(e) => onChange(e)}

@@ -32,7 +32,7 @@ const AddExperiencia = ({ addExperiencia, history }) => {
       <h1 className='large text-primary'>Adicione Uma Experiência</h1>
       <p className='lead'>
         <i className='fas fa-code-branch'></i> Adicione sua experiência
-        profissional como desenvolvedor que você teve no passado
+        profissional como desenvolvedor
       </p>
       <small>* = campo obrigatório</small>
       <form className='form' onSubmit={(e) => onSubmit(e)}>
